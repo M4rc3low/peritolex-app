@@ -1,86 +1,108 @@
 # PeritoLex
 
-PeritoLex e uma aplicacao web criada para organizar processos, prazos, documentos, movimentacoes e alertas importantes em uma interface clara e produtiva.
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38B2AC?logo=tailwindcss&logoColor=white)
+![LegalTech](https://img.shields.io/badge/domain-legaltech-blue)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-O projeto foi pensado como uma base para um painel operacional inteligente, reunindo dados relevantes em uma experiencia moderna, responsiva e orientada por informacoes praticas.
+PeritoLex e uma aplicacao web para organizar processos, prazos, documentos, movimentacoes e alertas importantes em uma interface clara, responsiva e orientada por dados.
 
-## Visao geral
+O projeto foi estruturado como uma base para um painel operacional inteligente, com foco em produtividade, controle de informacoes e apoio a rotinas juridicas, periciais e administrativas.
 
-Rotinas de acompanhamento de processos exigem organizacao constante, controle de prazos, leitura de movimentacoes e registro de documentos. Quando essas informacoes ficam espalhadas, aumenta o risco de perda de controle, atraso e retrabalho.
+## Visao de produto
 
-O PeritoLex busca reduzir esse problema com uma aplicacao centralizada, visual e preparada para evoluir com automacoes, integracoes e analises mais avancadas.
+Rotinas de acompanhamento de processos exigem organizacao constante, controle de prazos, leitura de movimentacoes, registro de documentos e classificacao de prioridades. Quando essas informacoes ficam espalhadas, aumenta o risco de atraso, perda de contexto e retrabalho.
 
-## Funcionalidades principais
+O PeritoLex busca reduzir esse problema com uma aplicacao centralizada, visual e preparada para evoluir com automacoes, integracoes externas, analises mais avancadas e monitoramento operacional.
+
+## Principais capacidades
 
 - Painel para acompanhamento de processos
-- Organizacao de movimentacoes
+- Organizacao de movimentacoes processuais
 - Controle de prazos e alertas
 - Classificacao de prioridade e risco
 - Registro de documentos relacionados
 - Apoio a analise de informacoes importantes
-- Interface responsiva para computador e celular
-- Base para futuras integracoes e automacoes
+- Base para automacoes e integracoes futuras
+- Interface responsiva para desktop e mobile
 
-## Tecnologias utilizadas
+## Stack tecnica
 
-- React
-- Vite
-- Tailwind CSS
-- React Router
-- TanStack Query
-- Recharts
-- Lucide React
+| Camada | Tecnologia |
+| --- | --- |
+| Frontend | React 18 |
+| Build | Vite |
+| Estilizacao | Tailwind CSS |
+| Roteamento | React Router |
+| Estado/dados | Local client + localStorage |
+| Data fetching | TanStack Query |
+| Graficos | Recharts |
+| UI/Icons | Radix UI + Lucide React |
+
+## Arquitetura
+
+```txt
+src/
+├── api/                 # Client local da aplicacao
+├── components/          # Componentes reutilizaveis por dominio
+├── hooks/               # Hooks de apoio
+├── lib/                 # Contextos, utilitarios e helpers
+├── pages/               # Paginas principais
+└── main.jsx             # Entrada da aplicacao
+```
+
+A camada de dados foi separada em um client local para facilitar evolucao futura para backend real, autenticacao, banco persistente, integracoes externas e rotinas automatizadas.
 
 ## Como executar localmente
 
-Clone o repositorio:
-
 ```bash
 git clone https://github.com/M4rc3low/peritolex-app.git
-```
-
-Acesse a pasta do projeto:
-
-```bash
 cd peritolex-app
-```
-
-Instale as dependencias:
-
-```bash
 npm install
-```
-
-Execute o ambiente de desenvolvimento:
-
-```bash
 npm run dev
 ```
 
-Gere a versao de producao:
+Build de producao:
 
 ```bash
 npm run build
-```
-
-Visualize o build localmente:
-
-```bash
 npm run preview
 ```
 
-## Roadmap
+## Scripts
 
-- [ ] Adicionar capturas reais da interface
-- [ ] Publicar uma versao demonstrativa
-- [ ] Criar modulos mais completos de alertas e prioridades
+| Comando | Descricao |
+| --- | --- |
+| `npm run dev` | Inicia o ambiente local |
+| `npm run build` | Gera build de producao |
+| `npm run preview` | Visualiza o build local |
+| `npm run lint` | Executa analise de lint |
+| `npm run lint:fix` | Corrige problemas automaticos de lint |
+| `npm run typecheck` | Executa verificacao de tipos/configuracao |
+
+## Qualidade e seguranca
+
+- Dados reais de processos nao devem ser versionados.
+- Arquivos sensiveis, documentos e credenciais devem ficar fora do repositorio.
+- Dados demonstrativos devem ser anonimizados.
+- Antes de publicar, executar `npm run build`, `npm run lint` e `npm run typecheck`.
+- Em producao, a camada local deve ser substituida por backend com autenticacao, autorizacao e controle de acesso.
+
+## Roadmap tecnico
+
+- [ ] Adicionar screenshots reais da interface
+- [ ] Publicar versao demonstrativa
 - [ ] Implementar autenticacao e perfis de usuario
-- [ ] Preparar integracoes com servicos externos
+- [ ] Criar persistencia em backend
+- [ ] Evoluir modulos de alertas, prazos e prioridade
+- [ ] Integrar fontes externas de dados processuais
+- [ ] Adicionar logs, observabilidade e monitoramento
 - [ ] Preparar deploy em ambiente de producao
 
-## Objetivo profissional
+## Valor profissional
 
-Este projeto faz parte do portfolio de Marcelo Gomes e demonstra aplicacao pratica de desenvolvimento web, organizacao de dados, automacao, dashboards e solucao de problemas reais de operacao.
+Este projeto demonstra desenvolvimento web aplicado a um problema real de operacao: organizacao de dados, automacao, acompanhamento de prazos, dashboards e construcao de interfaces orientadas a decisao.
 
 ## Autor
 
