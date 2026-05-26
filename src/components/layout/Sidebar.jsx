@@ -1,0 +1,96 @@
+﻿import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  LayoutDashboard, 
+  FileText, 
+  Clock, 
+  Bell, 
+  Scale,
+  CalendarDays,
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  Zap,
+  Users
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useState } from 'react';
+import { useCurrentUser } from '@/hooks/useCurrentUser';
+
+const allNavItems = [
+  { label: 'Dashboard', icon: LayoutDashboard, path: '/', adminOnly: false },
+  { label: 'Processos', icon: FileText, path: '/processos', adminOnly: false },
+  { label: 'Prazos', icon: Clock, path: '/prazos', adminOnly: false },
+  { label: 'Agenda', icon: CalendarDays, path: '/agenda', adminOnly: false },
+  { label: 'Alertas', icon: Bell, path: '/alertas', adminOnly: false },
+  { label: 'Equipe', icon: Users, path: '/equipe', adminOnly: false },
+  { label: 'Regras Auto', icon: Zap, path: '/regras', adminOnly: true },
+  { label: 'Instalar App', icon: Download, path: '/instalar', adminOnly: false },
+];
+
+export default function Sidebar() {
+  const location = useLocation();
+  const [collapsed, setCollapsed] = useState(false);
+  const { data: currentUser } = useCurrentUser();
+  const isAdmin = currentUser?.role === 'admin';
+  const navItems = allNavItems.filter(item => !item.adminOnly || isAdmin);
+
+  return (
+    <aside className={cn(
+      "h-screen bg-sidebar text-sidebar-foreground flex flex-col transition-all duration-300 sticky top-0",
+      collapsed ? "w-[72px]" : "w-64"
+    )}>
+      {/* Logo */}
+      <div className="p-5 flex items-center gap-3 border-b border-sidebar-border">
+        <div className="w-9 h-9 rounded-lg bg-sidebar-primary flex items-center justify-center flex-shrink-0">
+          <Scale className="w-5 h-5 text-sidebar-primary-foreground" />
+        </div>
+        {!collapsed && (
+          <div className="overflow-hidden">
+            <h1 className="font-display text-lg font-bold text-sidebar-foreground leading-tight">Perito</h1>
+            <p className="text-[10px] text-sidebar-foreground/50 uppercase tracking-widest">ContÃ¡bil</p>
+          </div>
+        )}
+      </div>
+
+      {/* Navigation */}
+      <nav className="flex-1 py-4 px-3 space-y-1">
+        {navItems.map((item) => {
+          const isActive = location.pathname === item.path || 
+            (item.path !== '/' && location.pathname.startsWith(item.path));
+          return (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={cn(
+                "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group",
+                isActive 
+                  ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-lg shadow-sidebar-primary/20" 
+                  : "text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
+              )}
+            >
+              <item.icon className={cn(
+                "w-5 h-5 flex-shrink-0",
+                isActive ? "text-sidebar-primary-foreground" : "text-sidebar-foreground/50 group-hover:text-sidebar-foreground"
+              )} />
+              {!collapsed && (
+                <span className="text-sm font-medium">{item.label}</span>
+              )}
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* Collapse button */}
+      <div className="p-3 border-t border-sidebar-border">
+        <button
+          onClick={() => setCollapsed(!collapsed)}
+          className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sidebar-foreground/40 hover:text-sidebar-foreground/70 hover:bg-sidebar-accent transition-colors"
+        >
+          {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+          {!collapsed && <span className="text-xs">Recolher</span>}
+        </button>
+      </div>
+    </aside>
+  );
+}
