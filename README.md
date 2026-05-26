@@ -1,21 +1,25 @@
-﻿# PeritoLex
+# PeritoLex
 
-PeritoLex Ã© uma aplicaÃ§Ã£o web voltada para organizaÃ§Ã£o, acompanhamento e anÃ¡lise de informaÃ§Ãµes jurÃ­dicas, com foco em produtividade para rotinas de perÃ­cia, controle de processos, prazos e leitura de dados relevantes.
+PeritoLex e uma aplicacao web criada para organizar processos, prazos, documentos, movimentacoes e alertas importantes em uma interface clara e produtiva.
 
-> Projeto em evoluÃ§Ã£o. O objetivo Ã© transformar atividades manuais de acompanhamento jurÃ­dico em uma experiÃªncia mais visual, organizada e orientada por dados.
+O projeto foi pensado como uma base para um painel operacional inteligente, reunindo dados relevantes em uma experiencia moderna, responsiva e orientada por informacoes praticas.
 
-## VisÃ£o geral
+## Visao geral
 
-Este projeto foi criado para servir como base de um painel jurÃ­dico inteligente, reunindo informaÃ§Ãµes importantes em uma interface moderna. A proposta Ã© facilitar a visualizaÃ§Ã£o de processos, movimentaÃ§Ãµes, prioridades, riscos e possÃ­veis pendÃªncias.
+Rotinas de acompanhamento de processos exigem organizacao constante, controle de prazos, leitura de movimentacoes e registro de documentos. Quando essas informacoes ficam espalhadas, aumenta o risco de perda de controle, atraso e retrabalho.
 
-## Funcionalidades previstas
+O PeritoLex busca reduzir esse problema com uma aplicacao centralizada, visual e preparada para evoluir com automacoes, integracoes e analises mais avancadas.
 
-- Painel visual para acompanhamento de processos
-- OrganizaÃ§Ã£o de movimentaÃ§Ãµes e informaÃ§Ãµes relevantes
-- ClassificaÃ§Ã£o de prioridade e risco
-- Apoio Ã  anÃ¡lise de prazos
-- Interface responsiva para uso em desktop e dispositivos mÃ³veis
-- Base para futuras integraÃ§Ãµes com automaÃ§Ãµes e serviÃ§os externos
+## Funcionalidades principais
+
+- Painel para acompanhamento de processos
+- Organizacao de movimentacoes
+- Controle de prazos e alertas
+- Classificacao de prioridade e risco
+- Registro de documentos relacionados
+- Apoio a analise de informacoes importantes
+- Interface responsiva para computador e celular
+- Base para futuras integracoes e automacoes
 
 ## Tecnologias utilizadas
 
@@ -29,57 +33,54 @@ Este projeto foi criado para servir como base de um painel jurÃ­dico inteligen
 
 ## Como executar localmente
 
-Clone o repositÃ³rio:
+Clone o repositorio:
 
 ```bash
-git clone https://github.com/M4rc3low/peritolex.git
+git clone https://github.com/M4rc3low/peritolex-app.git
 ```
 
 Acesse a pasta do projeto:
 
 ```bash
-cd peritolex
+cd peritolex-app
 ```
 
-Instale as dependÃªncias:
+Instale as dependencias:
 
 ```bash
 npm install
 ```
 
-
-```env
-```
-
-Execute o projeto:
+Execute o ambiente de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-## Scripts disponÃ­veis
+Gere a versao de producao:
 
 ```bash
-npm run dev        # inicia o ambiente de desenvolvimento
-npm run build      # gera a versÃ£o de produÃ§Ã£o
-npm run preview    # visualiza o build localmente
-npm run lint       # verifica problemas de lint
-npm run lint:fix   # corrige problemas de lint automaticamente
-npm run typecheck  # executa verificaÃ§Ã£o de tipos/configuraÃ§Ã£o
+npm run build
+```
+
+Visualize o build localmente:
+
+```bash
+npm run preview
 ```
 
 ## Roadmap
 
-- [ ] Melhorar documentaÃ§Ã£o tÃ©cnica
-- [ ] Adicionar prints da interface
-- [ ] Publicar versÃ£o demonstrativa
-- [ ] Implementar autenticaÃ§Ã£o e perfis de usuÃ¡rio
-- [ ] Criar mÃ³dulos de alertas e prioridades
-- [ ] Preparar deploy com ambiente de produÃ§Ã£o
+- [ ] Adicionar capturas reais da interface
+- [ ] Publicar uma versao demonstrativa
+- [ ] Criar modulos mais completos de alertas e prioridades
+- [ ] Implementar autenticacao e perfis de usuario
+- [ ] Preparar integracoes com servicos externos
+- [ ] Preparar deploy em ambiente de producao
 
 ## Objetivo profissional
 
-Este repositÃ³rio faz parte do meu portfÃ³lio de desenvolvimento, com foco em aplicaÃ§Ãµes web, automaÃ§Ã£o, dashboards, organizaÃ§Ã£o de dados e soluÃ§Ãµes para problemas reais de operaÃ§Ã£o.
+Este projeto faz parte do portfolio de Marcelo Gomes e demonstra aplicacao pratica de desenvolvimento web, organizacao de dados, automacao, dashboards e solucao de problemas reais de operacao.
 
 ## Autor
 
