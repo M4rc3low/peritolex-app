@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { Check, Circle, ChevronRight } from 'lucide-react';
+import { Check, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export const WORKFLOW_STEPS = [

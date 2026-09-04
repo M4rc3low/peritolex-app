@@ -1,9 +1,9 @@
 ﻿import React from 'react';
 import {
   BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis,
-  Tooltip, ResponsiveContainer, Legend, LineChart, Line, CartesianGrid
+  Tooltip, ResponsiveContainer, Legend, CartesianGrid
 } from 'recharts';
-import { differenceInDays, isPast, addDays, format, subMonths, startOfMonth, endOfMonth } from 'date-fns';
+import { addDays, format, subMonths, startOfMonth, endOfMonth } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
 const STATUS_LABELS = {

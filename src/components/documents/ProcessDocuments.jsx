@@ -2,7 +2,6 @@
 import { peritolexApi } from '@/api/peritolexClient';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Upload, FileText, Trash2, Download, Link2, Loader2, FileCheck } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';

@@ -3,7 +3,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FileText, Download, Pencil, Eye, Loader2 } from 'lucide-react';
-import { peritolexApi } from '@/api/peritolexClient';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 

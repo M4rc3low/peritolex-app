@@ -7,7 +7,6 @@ import { Plus, Clock, CheckCircle2, AlertTriangle, Search, MessageCircle, FileSp
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
 import DeadlineForm from '@/components/deadlines/DeadlineForm';

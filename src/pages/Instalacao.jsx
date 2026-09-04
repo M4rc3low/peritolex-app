@@ -1,7 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
-import { Monitor, Smartphone, Apple, Chrome, Download, CheckCircle2, ArrowRight, Star } from 'lucide-react';
+import { Monitor, Smartphone, Apple, Chrome, Download, CheckCircle2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 const steps = {

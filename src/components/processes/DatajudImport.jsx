@@ -6,7 +6,6 @@ import { Label } from '@/components/ui/label';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Search, Loader2, CheckCircle2, AlertCircle, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
 
 export default function DatajudImport({ open, onClose, onImport }) {
   const [numero, setNumero] = useState('');

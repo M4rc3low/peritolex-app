@@ -3,10 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { peritolexApi } from '@/api/peritolexClient';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
 import { 
   ArrowLeft, Pencil, Trash2, Plus, FileText,
-  User, Building, DollarSign, Calendar, Scale, Download
+  User, Building, DollarSign, Calendar
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

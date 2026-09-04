@@ -4,7 +4,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { format, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import {
-  Send, Paperclip, MessageSquare, ChevronDown,
+  Send, Paperclip, MessageSquare,
   FileText, HelpCircle, Bell, Loader2, X, Reply
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';

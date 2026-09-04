@@ -1,7 +1,7 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { peritolexApi } from '@/api/peritolexClient';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { FileText, Clock, AlertTriangle, DollarSign, Bell, BarChart2, FileDown, TrendingUp, Zap, CheckCircle2 } from 'lucide-react';
+import { FileText, AlertTriangle, DollarSign, Bell, BarChart2, FileDown, TrendingUp, Zap, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { isPast, isThisMonth, differenceInDays } from 'date-fns';
 import StatsCard from '@/components/dashboard/StatsCard';
@@ -12,7 +12,6 @@ import MonthlyReport from '@/components/reports/MonthlyReport';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { cn } from '@/lib/utils';
 
 export default function Dashboard() {
   const [showReport, setShowReport] = useState(false);
