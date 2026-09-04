@@ -40,7 +40,7 @@ O PeritoLex centraliza esses dados em uma aplicação preparada para evoluir com
 | Data fetching | TanStack Query |
 | Gráficos | Recharts |
 | UI/Icons | Radix UI + Lucide React |
-| Qualidade | ESLint + TypeScript check via JSConfig |
+| Qualidade | Smoke test + ESLint + build Vite |
 | Container | Docker |
 | CI | GitHub Actions |
 
@@ -90,18 +90,19 @@ docker run --rm -p 8080:80 peritolex-app
 | `npm run dev` | Inicia o ambiente local |
 | `npm test` | Executa smoke test estrutural |
 | `npm run lint` | Executa análise de lint |
-| `npm run typecheck` | Executa verificação de tipos/configuração |
 | `npm run build` | Gera build de produção |
 | `npm run preview` | Visualiza o build local |
 
-A pipeline de CI executa automaticamente **teste, lint, typecheck, build da aplicação e build da imagem Docker** em pushes e pull requests para `main`.
+A pipeline de CI executa automaticamente **smoke test, lint, build da aplicação e build da imagem Docker** em pushes e pull requests para `main`.
+
+> O projeto é atualmente JavaScript/JSX. A checagem estática completa de tipos não é tratada como gate obrigatório enquanto os componentes, APIs locais e contratos de dados não tiverem tipagem explícita suficiente. A migração para TypeScript/JSDoc fica registrada como uma melhoria técnica separada.
 
 ## Qualidade e segurança
 
 - Dados reais de processos não devem ser versionados.
 - Documentos, credenciais e informações sensíveis devem ficar fora do repositório.
 - Dados demonstrativos devem ser anonimizados.
-- Antes de integrar alterações, execute `npm test`, `npm run lint`, `npm run typecheck` e `npm run build`.
+- Antes de integrar alterações, execute `npm test`, `npm run lint` e `npm run build`.
 - Em produção, a camada local deve ser substituída por backend com autenticação, autorização e controle de acesso.
 
 ## Roadmap técnico
@@ -112,11 +113,12 @@ A pipeline de CI executa automaticamente **teste, lint, typecheck, build da apli
 - [ ] Criar persistência em backend
 - [ ] Evoluir módulos de alertas, prazos e prioridade
 - [ ] Integrar fontes externas de dados processuais
+- [ ] Migrar módulos críticos para TypeScript ou adicionar tipagem JSDoc consistente
 - [ ] Adicionar logs, observabilidade e monitoramento
 
 ## Valor profissional
 
-Este projeto demonstra desenvolvimento web aplicado a um problema operacional real, organização de dados, dashboards e práticas de engenharia como **testes estruturais, CI e containerização**.
+Este projeto demonstra desenvolvimento web aplicado a um problema operacional real, organização de dados, dashboards e práticas de engenharia como **testes estruturais, lint, CI e containerização**.
 
 ## Autor
 
